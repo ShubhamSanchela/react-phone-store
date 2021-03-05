@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function CartTotals({ value }) {
-  console.log(value);
+function CartTotals({ value, history }) {
+  console.log(history);
   const { cartTotal, cartTax, cartSubTotal, clearCart } = value || {};
   return (
     <React.Fragment>
@@ -32,6 +32,7 @@ function CartTotals({ value }) {
               <span className="text-title"> total :</span>{" "}
               <strong>$ {cartTotal} </strong>
             </h5>
+            
           </div>
         </div>
       </div>
